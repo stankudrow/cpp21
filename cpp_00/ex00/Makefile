@@ -1,9 +1,10 @@
-CC := c++
-FLAGS := -Wall -Werror -Wextra -fsanitize=address -fsanitize=leak -std=c++98
-
 NAME := megaphone
+
 SRCS := megaphone.cpp
 OBJS := $(SRCS:.cpp=.o)
+
+CC := c++
+FLAGS := -Wall -Werror -Wextra -std=c++98
 
 .PHONY: all clean fclean re
 
