@@ -4,52 +4,67 @@ Contact::Contact(void) {return ;}
 
 Contact::~Contact(void) {return ;}
 
-std::string	Contact::getFirstName(void)
+bool    operator==(const Contact & c1, const Contact & c2)
 {
-	return this->firstName;
+    if (c1.getFirstName() != c2.getFirstName())
+        return false;
+    if (c1.getLastName() != c2.getLastName())
+        return false;
+    if (c1.getNickName() != c2.getNickName())
+        return false;
+    if (c1.getPhoneNumber() != c2.getPhoneNumber())
+        return false;
+    if (c1.getDarkSecret() != c2.getDarkSecret())
+        return false;
+    return true;
 }
 
-void	Contact::setFirstName(std::string firstName)
+std::string Contact::getFirstName(void) const
 {
-	this->firstName = firstName;
+    return this->firstName;
 }
 
-std::string	Contact::getLastName(void)
+void    Contact::setFirstName(std::string firstName)
 {
-	return this->lastName;
+    this->firstName = firstName;
 }
 
-void	Contact::setLastName(std::string lastName)
+std::string Contact::getLastName(void) const
 {
-	this->lastName = lastName;
+    return this->lastName;
 }
 
-std::string	Contact::getNickName(void)
+void    Contact::setLastName(std::string lastName)
 {
-	return this->nickName;
+    this->lastName = lastName;
 }
 
-void	Contact::setNickName(std::string nickName)
+std::string Contact::getNickName(void) const
 {
-	this->nickName = nickName;
+    return this->nickName;
 }
 
-std::string	Contact::getPhoneNumber(void)
+void    Contact::setNickName(std::string nickName)
 {
-	return this->phoneNumber;
+    this->nickName = nickName;
 }
 
-void	Contact::setPhoneNumber(std::string phoneNumber)
+std::string Contact::getPhoneNumber(void) const
 {
-	this->phoneNumber = phoneNumber;
+    return this->phoneNumber;
 }
 
-std::string	Contact::getDarkSecret(void)
+void    Contact::setPhoneNumber(std::string phoneNumber)
 {
-	return this->darkSecret;
+    this->phoneNumber = phoneNumber;
 }
 
-void	Contact::setDarkSecret(std::string darkSecret)
+std::string Contact::getDarkSecret(void) const
 {
-	this->darkSecret = darkSecret;
+    return this->darkSecret;
+}
+
+void    Contact::setDarkSecret(std::string darkSecret)
+{
+    this->darkSecret = darkSecret;
 }
