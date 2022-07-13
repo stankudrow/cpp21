@@ -2,9 +2,7 @@
 #define PHONEBOOK_HPP
 
 #include "Contact.hpp"
-
-#include <iostream>
-#include <string>
+#include "Utils.hpp"
 
 class Phonebook
 {
@@ -15,7 +13,7 @@ class Phonebook
         void search(Contact &contact);
 
     private:
-        unsigned int    _getOldestContact(void);
+        unsigned int _getOldestContact(void);
         Contact _contacts[8];
 };
 

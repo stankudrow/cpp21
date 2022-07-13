@@ -8,7 +8,7 @@
 // https://cplusplus.com/reference/string/string/getline/
 
 // the dynamic allocation is forbidden
-static void	usage(void)
+static void usage(void)
 {
     std::cout << "$ ./Phonebook  # run the program" << std::endl;
     std::cout << "The program waits for the following commands:" << std::endl;
@@ -20,13 +20,13 @@ static void	usage(void)
     std::cout << std::endl;
 }
 
-int	main(void)
+int main(void)
 {
     Phonebook	phoneBook;
     std::string	command;
 
     usage();
-    phoneBook = Phonebook::Phonebook(8);
+    phoneBook = Phonebook::Phonebook();
     while (true)
     {
         // MacOS: no delim parametre

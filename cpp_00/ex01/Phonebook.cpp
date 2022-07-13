@@ -4,31 +4,7 @@ Phonebook::Phonebook(void) {return ;}
 
 Phonebook::~Phonebook(void) {return ;}
 
-// https://stackoverflow.com/questions/2251433/checking-for-eof-in-stringgetline
-static void readLine(std::string &str)
-{
-    std::string line;
-
-    std::getline(std::cin, line);
-    if (std::cin.fail())
-        throw // io exception
-    else if (!std::cin.eof())
-        // format error ????
-    else
-        // some error happened anyway ????
-    str = line;
-}
-
-static bool isPhoneNumberLike(const std::string &str)
-{
-    // for, e. g., +4221 or 4221 "internal" numbers
-    if (str.length() < 5)
-        return false;
-    // if + -> pass
-    // then checking on digits only + the end of the string
-}
-
-void    Phonebook::add(void)
+void Phonebook::add(void)
 {
     std::string field = "";
     Contact     contact = Contact();
